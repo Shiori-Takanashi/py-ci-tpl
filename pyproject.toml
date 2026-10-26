@@ -3,9 +3,7 @@ name = "py-ci-tpl"
 version = "0.1.0"
 description = "Python template for code quality and CI using uv."
 readme = "README.md"
-authors = [
-    { name = "Takanashi", email = "tnbirds314@gmail.com" }
-]
+authors = [{ name = "Takanashi", email = "tnbirds314@gmail.com" }]
 requires-python = "==3.15.*"
 dependencies = []
 
@@ -14,22 +12,22 @@ requires = ["uv_build==0.13.*"]
 build-backend = "uv_build"
 
 [dependency-groups]
-dev = [
-    "ruff==0.17.*",
-]
+dev = ["ruff==0.17.*"]
 
 [tool.uv]
 required-version = "==0.13.*"
 
 [tool.ruff]
+# 基本的な*.pyとpyproject.tomlのみ対応
+# 既定値を上書きしている。
 include = [
     "src/**/*.py",
     "tests/**/*.py",
     "scripts/**/*.py",
     "pyproject.toml",
 ]
-cache-dir = ".dev_cache/.ruff_cache"
-line-length = 88
-indent-width = 4
 
-target-version = "py315"
+cache-dir = ".dev_cache/.ruff_cache"                                            # 開発関連のキャッシュを集約
+line-length = 88                                                                # Blackに同じ
+indent-width = 4                                                                # Blackに同じ
+target-version = "py315"                                                        # PythonのVersion
