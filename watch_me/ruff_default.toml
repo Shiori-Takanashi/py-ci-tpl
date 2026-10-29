@@ -1,0 +1,8 @@
+# .conf_sample/ruff_default.toml
+
+[tool.ruff]
+builtins = []
+cache-dir = "~/.cache/ruff"
+exclude = [".bzr", ".direnv", ".eggs", ".git", ".git-rewrite", ".hg", ".mypy_cache", ".nox", ".pants.d", ".pytype", ".ruff_cache", ".svn", ".tox", ".venv", "__pypackages__", "_build", "buck-out", "dist", "node_modules", "venv"]
+# extend = null
+extend-exclude = []

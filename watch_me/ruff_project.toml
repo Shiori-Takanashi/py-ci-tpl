@@ -1,0 +1,14 @@
+[tool.ruff]
+# 基本的な*.pyとpyproject.tomlのみ対応
+# 既定値を上書きしている。
+include = [
+    "src/**/*.py",
+    "tests/**/*.py",
+    "scripts/**/*.py",
+    "pyproject.toml",
+]
+
+cache-dir = ".dev_cache/.ruff_cache"                                            # 開発関連のキャッシュを集約
+line-length = 88                                                                # Blackに同じ
+indent-width = 4                                                                # Blackに同じ
+target-version = "py315"                                                        # PythonのVersion
