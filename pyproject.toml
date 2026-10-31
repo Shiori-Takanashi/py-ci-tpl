@@ -30,4 +30,5 @@ include = [
 cache-dir = ".dev_cache/.ruff_cache"                                            # 開発関連のキャッシュを集約
 line-length = 88                                                                # Blackに同じ
 indent-width = 4                                                                # Blackに同じ
+output-format = "grouped"
 target-version = "py315"                                                        # PythonのVersion
